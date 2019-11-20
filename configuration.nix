@@ -9,13 +9,13 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      "./nix-config/tmux"
-      "./nix-config/git"
-      "./nix-config/zathura"
-      "./nix-config/neovim"
-      "./nix-config/i3"
-      "./nix-config/termite"
-      "./nix-config/zsh"
+      "${home}/nix-config/tmux"
+      "${home}/nix-config/git"
+      "${home}/nix-config/zathura"
+      "${home}/nix-config/neovim"
+      "${home}/nix-config/i3"
+      "${home}/nix-config/termite"
+      "${home}/nix-config/zsh"
       "${home-manager}/nixos"
     ];
 
