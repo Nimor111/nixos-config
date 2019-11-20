@@ -10,14 +10,14 @@ in
       enable = true;
 
       windowManager.i3 = {
-	enable = true; 
+	enable = true;
 	config = {
 	  modifier = "${i3modifier}";
 	  keybindings = pkgs.lib.mkOptionDefault {
 	    "${i3modifier}+Return" = "exec termite";
 	  };
 	};
-	extraConfig = ''      
+	extraConfig = ''
 	'';
       };
     };

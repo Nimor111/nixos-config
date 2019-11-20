@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-let 
+let
   nixosVersion = "19.09";
   home-manager = builtins.fetchTarball "https://github.com/rycee/home-manager/archive/release-${nixosVersion}.tar.gz";
   home = "/home/gbojinov";
