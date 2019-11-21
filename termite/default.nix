@@ -43,8 +43,6 @@
 	# light4 + light1
 	color7 = #a89984
 	color15 = #ebdbb2
-
-	# vim: ft=dosini cms=#%s
       '';
     };
   };

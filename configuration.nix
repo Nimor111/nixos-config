@@ -60,7 +60,11 @@ in
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  #hardware.pulseaudio = {
+    #enable = true;
+    #package = pkgs.pulseaudioFull;
+    #support32Bit = true;
+  #};
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -84,7 +88,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gbojinov = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "audio" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
