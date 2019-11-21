@@ -28,6 +28,7 @@
         viconf = "vi ~/.vimrc";
         zshconf = "vi ~/.zshrc";
         down = "git pull";
+        cat = "bat";
       };
 
       initExtra = ''
