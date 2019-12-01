@@ -117,5 +117,11 @@ in
       pkgs.bat
       pkgs.htop
     ];
+
+    services.random-background = {
+      enable = true;
+      imageDirectory = "%h/wallpapers";
+      interval = "10s";
+    };
   };
 }
