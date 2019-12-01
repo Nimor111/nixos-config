@@ -18,6 +18,7 @@
 	pkgs.vimPlugins.nerdtree
 	pkgs.vimPlugins.ctrlp
 	pkgs.vimPlugins.gruvbox
+        pkgs.vimPlugins.haskell-vim
       ];
       extraConfig = ''
         " line numbers relative to current position of cursor
@@ -61,6 +62,9 @@
         nnoremap <C-K> <C-W><C-K>
         nnoremap <C-L> <C-W><C-L>
         nnoremap <C-H> <C-W><C-H>
+
+        " set spacing
+        autocmd FileType haskell setlocal shiftwidth=4 softtabstop=2 expandtab
       '';
     };
   };
