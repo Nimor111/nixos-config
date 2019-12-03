@@ -116,6 +116,9 @@
 	bind-key -T copy-mode-vi y send-keys -X copy-selection
 	bind-key -T copy-mode-vi r send-keys -X rectangle-selection
 	bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -sel clip -i"
+
+        # vi binds
+        set-window-option -g mode-keys vi
       '';
     };
   };
