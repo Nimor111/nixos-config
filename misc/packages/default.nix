@@ -15,6 +15,7 @@
       pkgs.ripgrep
       pkgs.bat
       pkgs.htop
+      pkgs.autojump
     ];
   };
 }
