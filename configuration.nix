@@ -15,6 +15,8 @@ in
       "${home}/nix-config/neovim"
       "${home}/nix-config/i3"
       "${home}/nix-config/termite"
+      "${home}/nix-config/misc/wallpapers"
+      "${home}/nix-config/misc/packages"
       "${home}/nix-config/zsh"
       "${home-manager}/nixos"
     ];
@@ -100,28 +102,4 @@ in
 
   # allow installing non-free packages
   nixpkgs.config.allowUnfree = true;
-
-  # home-manager stuff
-  home-manager.users.gbojinov = homeManager: {
-    home.packages = [
-      pkgs.neofetch
-      pkgs.sakura
-      pkgs.vivaldi
-      pkgs.home-manager
-      pkgs.i3lock-fancy
-      pkgs.acpi
-      pkgs.rtv
-      pkgs.emacs
-      pkgs.fd
-      pkgs.ripgrep
-      pkgs.bat
-      pkgs.htop
-    ];
-
-    services.random-background = {
-      enable = true;
-      imageDirectory = "%h/wallpapers";
-      interval = "10s";
-    };
-  };
 }
