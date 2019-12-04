@@ -43,6 +43,9 @@
 
         # Source autojump file
         source ~/.nix-profile/etc/profile.d/autojump.sh
+
+        # Source virtualenvwrapper file
+        source ~/.nix-profile/bin/virtualenvwrapper.sh
       '';
     };
   };
