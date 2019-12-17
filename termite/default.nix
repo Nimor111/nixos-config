@@ -4,7 +4,7 @@
   home-manager.users.gbojinov = homeManager: {
     programs.termite = {
       enable = true;
-      font = "Source Code Pro 16";
+      font = "16";
       colorsExtra = ''
 	# hard contrast: background = #1d2021
 	background = #282828

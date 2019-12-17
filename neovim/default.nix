@@ -10,7 +10,7 @@
         pkgs.vimPlugins.vim-nix
 	pkgs.vimPlugins.vim-multiple-cursors
 	pkgs.vimPlugins.vim-highlightedyank
-	pkgs.vimPlugins.vim-devicons
+        # pkgs.vimPlugins.vim-devicons
 	pkgs.vimPlugins.vim-auto-save
 	pkgs.vimPlugins.vim-airline
 	pkgs.vimPlugins.vim-airline-themes

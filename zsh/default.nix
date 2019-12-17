@@ -11,7 +11,7 @@
           "git"
           "web-search"
         ];
-        theme = "robbyrussell";
+        theme = "theunraveler";
       };
 
       shellAliases = {
@@ -19,10 +19,11 @@
         "g++" = "g++ -std=c++11";
         py = "python3";
         rdm = "vi README.md";
+        ls = "exa";
         sl = "ls --color=auto";
         lls = "ls --color=auto";
         lss = "ls --color=auto";
-        ls = "ls --color=auto";
+        #ls = "ls --color=auto";
         cwd = "pwd";
         pw = "poweroff";
         viconf = "vi ~/.vimrc";

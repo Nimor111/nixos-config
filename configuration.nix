@@ -87,18 +87,31 @@ in
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
+  # docker
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gbojinov = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    extraGroups = [
+      "wheel" # Enable ‘sudo’ for the user.
+      "audio"
+      "docker" # Don't use sudo for docker
+    ];
   };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "19.09"; # Did you read the comment?
+
+  # set to 19.03 because of https://github.com/NixOS/nixpkgs/issues/64922
+  system.stateVersion = "19.03"; # Did you read the comment?
 
   # allow installing non-free packages
   nixpkgs.config.allowUnfree = true;

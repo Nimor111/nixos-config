@@ -15,6 +15,7 @@
       pkgs.bat
       pkgs.htop
       pkgs.autojump
+      pkgs.jq
 
       # the one and only
       pkgs.home-manager
