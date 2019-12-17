@@ -16,6 +16,7 @@
       pkgs.htop
       pkgs.autojump
       pkgs.jq
+      pkgs.exa
 
       # the one and only
       pkgs.home-manager
@@ -30,6 +31,17 @@
       pkgs.python3Full
       pkgs.python37Packages.virtualenv
       pkgs.python37Packages.virtualenvwrapper
+
+      # elixir
+      pkgs.elixir
+
+      # scala
+      pkgs.scala
+      pkgs.sbt
+      pkgs.jetbrains.idea-community
+
+      # gcc
+      pkgs.gcc
     ];
   };
 }
