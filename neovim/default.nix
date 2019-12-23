@@ -1,5 +1,8 @@
 {pkgs, config, ...}:
 
+let
+  plugins = pkgs.vimPlugins // pkgs.callPackage ./custom-plugins.nix {};
+in
 {
   home-manager.users.gbojinov = homeManager: {
     programs.neovim = {
@@ -7,18 +10,24 @@
       viAlias = true;
       vimAlias = true;
       plugins = [
-        pkgs.vimPlugins.vim-nix
-	pkgs.vimPlugins.vim-multiple-cursors
-	pkgs.vimPlugins.vim-highlightedyank
-        # pkgs.vimPlugins.vim-devicons
-	pkgs.vimPlugins.vim-auto-save
-	pkgs.vimPlugins.vim-airline
-	pkgs.vimPlugins.vim-airline-themes
-	pkgs.vimPlugins.nerdcommenter
-	pkgs.vimPlugins.nerdtree
-	pkgs.vimPlugins.ctrlp
-	pkgs.vimPlugins.gruvbox
-        pkgs.vimPlugins.haskell-vim
+        plugins.vim-nix
+	plugins.vim-multiple-cursors
+	plugins.vim-highlightedyank
+        # plugins.vim-devicons
+	plugins.vim-auto-save
+	plugins.vim-airline
+	plugins.vim-airline-themes
+        plugins.vim-elixir
+	plugins.nerdcommenter
+	plugins.nerdtree
+	plugins.ctrlp
+	plugins.gruvbox
+        plugins.haskell-vim
+
+        plugins.vim-erlang-runtime
+        plugins.vim-erlang-compiler
+        plugins.vim-erlang-omnicomplete
+        plugins.vim-erlang-tags
       ];
       extraConfig = ''
         " line numbers relative to current position of cursor
@@ -65,6 +74,9 @@
 
         " set spacing
         autocmd FileType haskell setlocal shiftwidth=4 softtabstop=2 expandtab
+
+        " map turning off highlighting in searches
+        nmap <leader>f :set nohlsearch<CR>
       '';
     };
   };
