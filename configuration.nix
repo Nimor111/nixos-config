@@ -11,12 +11,13 @@ in
       ./hardware-configuration.nix
       ./cachix.nix
       "${home}/nix-config/tmux"
+      "${home}/nix-config/files"
       "${home}/nix-config/git"
       "${home}/nix-config/zathura"
       "${home}/nix-config/neovim"
       "${home}/nix-config/i3"
       "${home}/nix-config/termite"
-      "${home}/nix-config/misc/wallpapers"
+      # "${home}/nix-config/misc/wallpapers"
       "${home}/nix-config/misc/packages"
       "${home}/nix-config/zsh"
       "${home-manager}/nixos"
@@ -71,17 +72,12 @@ in
 
   # Enable the X11 windowing system.
   services.xserver = {
+    exportConfiguration = true; # link /usr/share/X11/ properly
     enable = true;
-    layout = "us";
-    xkbOptions = "eurosign:e";
-    desktopManager = {
-      default = "none";
-    };
-    displayManager = {
-      startx = {
-        enable = true;
-      };
-    };
+    layout = "us,bg";
+    xkbOptions = "grp:switch,grp:alt_shift_toggle,grp_led:scroll";
+    xkbVariant = ",phonetic";
+    displayManager.startx.enable = true;
   };
 
   # Fonts

@@ -8,6 +8,7 @@ in
     home-manager.users.gbojinov = homeManager: {
       xsession = {
         enable = true;
+        scriptPath = ".xsession";
 
         windowManager.i3 = {
           enable = true;
