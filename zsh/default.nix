@@ -48,6 +48,9 @@
 
         # Source virtualenvwrapper file
         source ~/.nix-profile/bin/virtualenvwrapper.sh
+
+        # 256-color terminal
+        export TERM=xterm-256color
       '';
     };
   };
