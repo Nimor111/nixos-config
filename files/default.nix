@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 
 {
-  home-manager.users.gbojinov = homeManager: {
+  home-manager.users.gbojinov = {
     home.file = {
       ".xinitrc".text = ''
         # Set toggle between langs

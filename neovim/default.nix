@@ -4,7 +4,7 @@ let
   plugins = pkgs.vimPlugins // pkgs.callPackage ./custom-plugins.nix {};
 in
   {
-    home-manager.users.gbojinov = homeManager: {
+    home-manager.users.gbojinov = {
       programs.neovim = {
         enable = true;
         viAlias = true;

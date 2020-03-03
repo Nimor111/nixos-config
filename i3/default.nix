@@ -5,7 +5,7 @@ let
 in
 
   {
-    home-manager.users.gbojinov = homeManager: {
+    home-manager.users.gbojinov = {
       xsession = {
         enable = true;
         scriptPath = ".xsession";

@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 
 {
-  home-manager.users.gbojinov = homeManager: {
+  home-manager.users.gbojinov = {
     programs.zsh = {
       enable = true;
       enableAutosuggestions = true;
