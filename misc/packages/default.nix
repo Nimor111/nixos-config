@@ -18,6 +18,7 @@
       pkgs.autojump
       pkgs.jq
       pkgs.exa
+      pkgs.feh
 
       # the one and only
       pkgs.home-manager
@@ -43,6 +44,14 @@
 
       # gcc
       pkgs.gcc
+
+      # rustup
+      # pkgs.rustup
+
+      # haskell
+      #pkgs.ghc
+      #pkgs.stack
+      #pkgs.ghcid
     ];
   };
 }

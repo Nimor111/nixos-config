@@ -9,6 +9,7 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./cachix.nix
       "${home}/nix-config/tmux"
       "${home}/nix-config/git"
       "${home}/nix-config/zathura"
@@ -76,8 +77,10 @@ in
     desktopManager = {
       default = "none";
     };
-    displayManager.lightdm = {
-      enable = true;
+    displayManager = {
+      startx = {
+        enable = true;
+      };
     };
   };
 
@@ -115,4 +118,10 @@ in
 
   # allow installing non-free packages
   nixpkgs.config.allowUnfree = true;
+
+  # allow installing nix packages marked as broken
+  # nixpkgs.config.allowBroken = true;
+
+  # light settings
+  programs.light.enable = true;
 }

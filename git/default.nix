@@ -8,11 +8,11 @@
       userEmail = "georgi.bojinov@hotmail.com";
       extraConfig = {
         alias = {
-	  co = "checkout";
-	  br = "branch";
-	  ci = "commit";
-	  st = "status";
-	};
+          co = "checkout";
+          br = "branch";
+          ci = "commit";
+          st = "status";
+        };
       };
     };
   };

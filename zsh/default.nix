@@ -33,7 +33,8 @@
       };
 
       initExtra = ''
-        neofetch
+        # motd
+        pfetch
 
         # Preferred editor for local and remote sessions
         if [[ -n $SSH_CONNECTION ]]; then
