@@ -17,6 +17,7 @@ in
       "${home}/nix-config/neovim"
       #"${home}/nix-config/i3",
       "${home}/nix-config/xmobar"
+      "${home}/nix-config/xpm"
       "${home}/nix-config/xmonad"
       "${home}/nix-config/termite"
       # "${home}/nix-config/misc/wallpapers"

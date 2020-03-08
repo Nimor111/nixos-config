@@ -11,7 +11,7 @@
                , lowerOnStart = True
                , hideOnStart = False
                , persistent= True
-               , iconRoot = ".xmonad/xpm" -- default: "."
+               , iconRoot = "/home/gbojinov/.config/xmobar/xpm" -- default: "."
                , commands = [ Run Date "%a, %b %d %Y, %H:%M:%S" "date" 10
                             -- , Run Network "wlp3s0" ["-t", "<icon=net_up_20.xpm/>up <rxbar>", "-S", "True"] 10
                             , Run DynNetwork ["-t", "<icon=net_up_20.xpm/>up <rx> | <tx>", "-S", "True"] 10
