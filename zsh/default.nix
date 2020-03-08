@@ -41,7 +41,7 @@
           export EDITOR='nvim'
         else
           export EDITOR='nvim'
-            fi
+        fi
 
         # Source autojump file
         source ~/.nix-profile/etc/profile.d/autojump.sh

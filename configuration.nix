@@ -11,11 +11,13 @@ in
       ./hardware-configuration.nix
       ./cachix.nix
       "${home}/nix-config/tmux"
-      "${home}/nix-config/files"
+      "${home}/nix-config/xinit"
       "${home}/nix-config/git"
       "${home}/nix-config/zathura"
       "${home}/nix-config/neovim"
-      "${home}/nix-config/i3"
+      #"${home}/nix-config/i3",
+      "${home}/nix-config/xmobar"
+      "${home}/nix-config/xmonad"
       "${home}/nix-config/termite"
       # "${home}/nix-config/misc/wallpapers"
       "${home}/nix-config/misc/packages"

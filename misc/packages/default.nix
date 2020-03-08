@@ -19,6 +19,8 @@
       pkgs.jq
       pkgs.exa
       pkgs.feh
+      pkgs.xmobar
+      pkgs.dmenu
 
       # the one and only
       pkgs.home-manager
