@@ -9,7 +9,7 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./cachix.nix
+      #./cachix.nix
       "${home}/nix-config/tmux"
       "${home}/nix-config/xinit"
       "${home}/nix-config/git"
