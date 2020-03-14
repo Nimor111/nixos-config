@@ -2,6 +2,14 @@
 
 {
   home-manager.users.gbojinov = {
+    home.file = {
+      ".zprofile".text = ''
+        if [ "$(tty)" = /dev/tty1 ]; then
+            exec startx
+        fi
+      '';
+    };
+
     programs.zsh = {
       enable = true;
       enableAutosuggestions = true;
