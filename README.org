@@ -1,0 +1,16 @@
+#+TITLE:   Nixos configuration
+#+DATE:    March 15, 2020
+
+** Steps to use
+1. Create a new configuration in the [[./machine][machine]] directory (with a ~default.nix~ and
+   a ~hardware.nix~) and symlink the ~default.nix~ to ~/etc/nixos/configuration.nix~
+2. Rebuild the nixos configuration:
+  #+BEGIN_SRC bash
+  sudo nixos-rebuild switch
+  #+END_SRC
+
+** Structure
+- [[./machine][machine]] - machine configurations
+- [[./modules][modules]] - reusable chunks to build a machine configuration. Includes
+  modules from [[https://github.com/rycee/home-manager][home-manager]] and ~nixos~
+- ~source.*~ - [[https://github.com/nmattia/niv][niv]] files
