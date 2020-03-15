@@ -18,6 +18,7 @@ myModMask = mod4Mask
 myBorderWidth = 2
 myNormalBorderColor = "#292d3e"
 myFocusedBorderColor = "#ffb86c"
+myFont = "xft:FiraCode:regular:pixelsize=16"
 
 main :: IO ()
 main = do

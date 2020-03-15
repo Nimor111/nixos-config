@@ -8,6 +8,8 @@
       pkgs.vivaldi
 
       # terminal apps and tools
+      pkgs.wget
+      pkgs.vim
       pkgs.neofetch
       pkgs.acpi
       pkgs.rtv
