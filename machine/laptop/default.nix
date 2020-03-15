@@ -8,21 +8,21 @@ in
 {
   imports =
     [
+      "${home-manager}/nixos"
       "${home}/nix-config/services"
       "${home}/nix-config/machine/laptop/hardware.nix"
 
-      "${home}/nix-config/tmux"
-      "${home}/nix-config/xinit"
-      "${home}/nix-config/git"
-      "${home}/nix-config/zathura"
-      "${home}/nix-config/neovim"
-      "${home}/nix-config/xmobar"
-      "${home}/nix-config/xpm"
-      "${home}/nix-config/xmonad"
-      "${home}/nix-config/termite"
-      "${home}/nix-config/misc/packages"
-      "${home}/nix-config/zsh"
-      "${home-manager}/nixos"
+      "${home}/nix-config/modules/tmux"
+      "${home}/nix-config/modules/xinit"
+      "${home}/nix-config/modules/git"
+      "${home}/nix-config/modules/zathura"
+      "${home}/nix-config/modules/neovim"
+      "${home}/nix-config/modules/xmobar"
+      "${home}/nix-config/modules/xpm"
+      "${home}/nix-config/modules/xmonad"
+      "${home}/nix-config/modules/termite"
+      "${home}/nix-config/modules/misc/packages"
+      "${home}/nix-config/modules/zsh"
     ];
 
   boot = {
