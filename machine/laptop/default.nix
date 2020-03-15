@@ -3,27 +3,28 @@
 let
   nixosVersion = "19.09";
   home-manager = builtins.fetchTarball "https://github.com/rycee/home-manager/archive/release-${nixosVersion}.tar.gz";
-  home = "/home/gbojinov";
 in
 {
   imports =
     [
       "${home-manager}/nixos"
-      "${home}/nix-config/machine/laptop/hardware.nix"
+      ./hardware.nix
 
-      "${home}/nix-config/modules/virtualisation"
-      "${home}/nix-config/modules/services"
-      "${home}/nix-config/modules/tmux"
-      "${home}/nix-config/modules/xinit"
-      "${home}/nix-config/modules/git"
-      "${home}/nix-config/modules/zathura"
-      "${home}/nix-config/modules/neovim"
-      "${home}/nix-config/modules/xmobar"
-      "${home}/nix-config/modules/xpm"
-      "${home}/nix-config/modules/xmonad"
-      "${home}/nix-config/modules/termite"
-      "${home}/nix-config/modules/misc/packages"
-      "${home}/nix-config/modules/zsh"
+      ../../modules/virtualisation
+      ../../modules/services
+      ../../modules/networking
+      ../../modules/backlight
+      ../../modules/tmux
+      ../../modules/xinit
+      ../../modules/git
+      ../../modules/zathura
+      ../../modules/neovim
+      ../../modules/xmobar
+      ../../modules/xpm
+      ../../modules/xmonad
+      ../../modules/termite
+      ../../modules/misc/packages
+      ../../modules/zsh
     ];
 
   boot = {
@@ -38,13 +39,12 @@ in
         configfile (hd0,1)/boot/grub/grub.cfg
       }
     '';
+    # always used latest available kernel
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  # Define hostname and wifi with network manager
-  networking = {
-    hostName = "nixos-gb";
-    networkmanager.enable = true;
-  };
+  # Define hostname
+  networking.hostName = "nixos-gb";
 
   # sound
   sound.enable = true;
@@ -75,9 +75,6 @@ in
 
   # set to 19.03 because of https://github.com/NixOS/nixpkgs/issues/64922
   system.stateVersion = "19.03"; # Did you read the comment?
-
-  # light settings
-  programs.light.enable = true;
 
   # install proprietary packages
   nixpkgs.config.allowUnfree = true;
