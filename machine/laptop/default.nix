@@ -9,9 +9,10 @@ in
   imports =
     [
       "${home-manager}/nixos"
-      "${home}/nix-config/services"
       "${home}/nix-config/machine/laptop/hardware.nix"
 
+      "${home}/nix-config/modules/virtualisation"
+      "${home}/nix-config/modules/services"
       "${home}/nix-config/modules/tmux"
       "${home}/nix-config/modules/xinit"
       "${home}/nix-config/modules/git"
@@ -80,9 +81,6 @@ in
 
   # install proprietary packages
   nixpkgs.config.allowUnfree = true;
-
-  # docker
-  virtualisation.docker.enable = true;
 
   # fonts
   fonts.fonts = with pkgs; [font-awesome_5];
