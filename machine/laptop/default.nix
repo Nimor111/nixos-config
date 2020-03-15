@@ -1,13 +1,13 @@
 {pkgs, config, ...}:
 
 let
+  sources = import ../../sources.nix;
   nixosVersion = "19.09";
-  home-manager = builtins.fetchTarball "https://github.com/rycee/home-manager/archive/release-${nixosVersion}.tar.gz";
 in
 {
   imports =
     [
-      "${home-manager}/nixos"
+      "${sources.home-manager}/nixos"
       ./hardware.nix
 
       ../../modules/user
