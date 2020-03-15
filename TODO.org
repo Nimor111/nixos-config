@@ -1,0 +1,20 @@
+#+TITLE: Notes on stuff to do with the system
+
+** Things to setup on the system
+- [ ] Handle nixpkgs with ~niv~
+- [ ] SSH service and key setup
+- [ ] Newsboat
+- [ ] Wallpaper chooser
+- [ ] Lorri & direnv
+- [ ] Template ~shell.nix~ files for different languages
+- [ ] Password manager (~pass~)
+- [ ] Email client setup (~home-manager/accounts.email~)
+- [ ] Dropbox sync for org files
+- [ ] Format code with ~nixfmt~ and lint with ~nix-linter~
+
+** Different things to try
+- Wayland (sway, waybar, swaylock)
+- Different ~nixos~ and ~home-manager~ options
+- Dwm
+- More suckless stuff - suckless.org/rocks
+- Dunst for notifications
