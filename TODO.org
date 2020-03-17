@@ -1,7 +1,7 @@
 #+TITLE: Notes on stuff to do with the system
 
 ** Things to setup on the system
-- [ ] Handle nixpkgs with ~niv~
+- [X] Handle nixpkgs with ~niv~
 - [ ] SSH service and key setup
 - [ ] Newsboat
 - [ ] Wallpaper chooser

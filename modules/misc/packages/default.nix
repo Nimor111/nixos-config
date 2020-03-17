@@ -23,6 +23,7 @@
       pkgs.feh
       pkgs.xmobar
       pkgs.dmenu
+      pkgs.xclip
 
       # the one and only
       pkgs.home-manager

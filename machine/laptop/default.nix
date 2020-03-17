@@ -1,15 +1,15 @@
-{pkgs, config, ...}:
+{...}:
 
 let
   sources = import ../../sources.nix;
-  nixosVersion = "19.09";
 in
 {
   imports =
     [
-      "${sources.home-manager}/nixos"
       ./hardware.nix
+      "${sources.home-manager}/nixos"
 
+      ../../modules/nix-path
       ../../modules/user
       ../../modules/virtualisation
       ../../modules/services
