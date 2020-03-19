@@ -3,11 +3,18 @@
 
 ** Steps to use
 1. Create a new configuration in the [[./machine][machine]] directory (with a ~default.nix~ and
-   a ~hardware.nix~) and symlink the ~default.nix~ to ~/etc/nixos/configuration.nix~
-2. Rebuild the nixos configuration:
-  #+BEGIN_SRC bash
-  sudo nixos-rebuild switch
-  #+END_SRC
+   a ~hardware.nix~) and symlink the ~default.nix~ to ~/etc/nixos/configuration.nix~:
+   #+BEGIN_SRC bash
+   sudo ln -s machine/<machine>/default.nix /etc/nixos/configuration.nix
+   #+END_SRC
+2. Symlink the overlays:
+   #+BEGIN_SRC bash
+   sudo ln -s overlays /etc/nixos/overlays
+   #+END_SRC
+3. Rebuild the nixos configuration:
+   #+BEGIN_SRC bash
+   nix-shell --run 'rebuild'
+   #+END_SRC
 
 ** Structure
 - [[./machine][machine]] - machine configurations
