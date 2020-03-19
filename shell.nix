@@ -20,7 +20,7 @@ let
 
   nix-path = build-nix-path-env-var {
     nixpkgs = sources.nixpkgs;
-    nixpkgs-overlays = "";
+    nixpkgs-overlays = "/etc/nixos/overlays";
     nixos-config = "/etc/nixos/configuration.nix";
   };
 

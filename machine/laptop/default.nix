@@ -6,8 +6,8 @@ in
 {
   imports =
     [
-      ./hardware.nix
       "${sources.home-manager}/nixos"
+      ./hardware.nix
 
       ../../modules/nix-path
       ../../modules/user

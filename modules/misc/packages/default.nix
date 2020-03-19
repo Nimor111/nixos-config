@@ -24,6 +24,7 @@
       pkgs.xmobar
       pkgs.dmenu
       pkgs.xclip
+      pkgs.pfetch
 
       # the one and only
       pkgs.home-manager
