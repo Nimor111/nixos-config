@@ -5,8 +5,6 @@ let
 in
 {
   home-manager.users.gbojinov = {
-    home.file = {
-      ".config/xmobar/.xmobarrc".text = xmobarConfig;
-    };
+    xdg.configFile."xmobar/.xmobarrc".text = xmobarConfig;
   };
 }
