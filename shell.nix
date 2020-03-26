@@ -13,25 +13,15 @@ let
     '';
   };
 
-  build-nix-path-env-var = path:
-    builtins.concatStringsSep ":" (
-      pkgs.lib.mapAttrsToList (k: v: "${k}=${v}") path
-    );
-
-  nix-path = build-nix-path-env-var {
-    nixpkgs = sources.nixpkgs;
-    nixpkgs-overlays = "/etc/nixos/overlays";
-    nixos-config = "/etc/nixos/configuration.nix";
-  };
-
-  set-nix-path = ''
-    export NIX_PATH="${nix-path}"
-  '';
+  configuration = /etc/nixos/configuration.nix;
+  overlays = /etc/nixos/overlays;
 
   rebuild = pkgs.writeShellScriptBin "rebuild" ''
     set -e
-    ${set-nix-path}
-    sudo nixos-rebuild switch --show-trace
+    sudo nixos-rebuild switch --show-trace \
+      -I nixpkgs=${sources.nixpkgs} \
+      -I nixos-config=${configuration} \
+      -I nixpkgs-overlays=${overlays}
   '';
 in
 
