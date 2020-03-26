@@ -43,6 +43,9 @@
       # gcc
       pkgs.gcc
       pkgs.gnumake
+
+      # nodejs
+      pkgs.nodejs
     ];
   };
 }

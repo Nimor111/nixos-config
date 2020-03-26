@@ -68,7 +68,7 @@ let g:jedi#completions_command = '<C-Space>'
 let g:jedi#rename_command = '<leader>r'
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 
 " python linter
 let g:neomake_python_enabled_makers = ['flake8']
@@ -78,3 +78,9 @@ autocmd BufEnter * call neomake#configure#automake('nrwi', 100)
 
 " open quickfix window on neomake errors
 let g:neomake_open_list = 2
+
+" coc.nvim GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)

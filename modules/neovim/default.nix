@@ -30,10 +30,14 @@ in
               plugins.neomake
               plugins.supertab
               plugins.deoplete-nvim
+              plugins.coc-nvim
 
               # python plugins
               plugins.deoplete-jedi
               plugins.jedi-vim
+
+              # elm
+              plugins.elm-vim
             ];
             opt = [ ];
           };
