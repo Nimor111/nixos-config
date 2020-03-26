@@ -2,6 +2,7 @@
 
 let
   zshConfig = builtins.readFile ./.zshrc;
+  sources = import ../../sources.nix;
 in
 {
   home-manager.users.gbojinov = {
@@ -44,6 +45,11 @@ in
       };
 
       initExtra = zshConfig;
+
+      sessionVariables = {
+        # TODO check why this is needed, NIX_PATH is otherwise randomly set to something old...
+        NIX_PATH = "nixpkgs=${sources.nixpkgs}:nixos-config=/etc/nixos/configuration.nix:nixpkgs-overlays=/etc/nixos/overlays";
+      };
     };
   };
 }
