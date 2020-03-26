@@ -8,7 +8,6 @@ let
     builtins.attrNames (builtins.readDir (toString <nixpkgs-overlays>));
 in
 {
-  # install proprietary packages
   nixpkgs = {
     config = import ./nixpkgs-config.nix;
     overlays = map load-overlay all-overlays;
