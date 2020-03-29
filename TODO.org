@@ -2,10 +2,10 @@
 
 ** Things to setup on the system
 - [X] Handle nixpkgs with ~niv~
+- [X] Lorri & direnv
 - [ ] SSH service and key setup
 - [ ] Newsboat
 - [ ] Wallpaper chooser
-- [ ] Lorri & direnv
 - [ ] Template ~shell.nix~ files for different languages
 - [ ] Password manager (~pass~)
 - [ ] Email client setup (~home-manager/accounts.email~)
