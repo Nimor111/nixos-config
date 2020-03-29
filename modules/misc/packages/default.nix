@@ -25,6 +25,7 @@
       pkgs.dmenu
       pkgs.xclip
       pkgs.pfetch
+      pkgs.direnv
 
       # the one and only
       pkgs.home-manager

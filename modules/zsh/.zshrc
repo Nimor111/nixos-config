@@ -16,3 +16,6 @@ source ~/.nix-profile/bin/virtualenvwrapper.sh
 
 # 256-color terminal
 export TERM=xterm-256color
+
+# direnv setup hook
+eval "$(direnv hook zsh)"

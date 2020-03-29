@@ -67,8 +67,12 @@ let g:jedi#usages_command = '<leader>n'
 let g:jedi#completions_command = '<C-Space>'
 let g:jedi#rename_command = '<leader>r'
 
-" deoplete
-let g:deoplete#enable_at_startup = 0
+" deoplete - enable at startup
+let g:deoplete#enable_at_startup = 1
+
+" enable deoplete in python files
+autocmd FileType elm
+\ call deoplete#custom#buffer_option('auto_complete', v:false)
 
 " python linter
 let g:neomake_python_enabled_makers = ['flake8']
