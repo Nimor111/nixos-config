@@ -26,6 +26,7 @@
       pkgs.xclip
       pkgs.pfetch
       pkgs.direnv
+      pkgs.vifm
 
       # the one and only
       pkgs.home-manager
@@ -37,9 +38,9 @@
       pkgs.emacs
 
       # python packages
-      pkgs.python3Full
-      pkgs.python37Packages.virtualenv
-      pkgs.python37Packages.virtualenvwrapper
+      # pkgs.python3Full
+      # pkgs.python37Packages.virtualenv
+      # pkgs.python37Packages.virtualenvwrapper
 
       # gcc
       pkgs.gcc

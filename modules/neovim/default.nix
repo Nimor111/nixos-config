@@ -1,4 +1,4 @@
-{pkgs, config, ...}:
+{pkgs, ...}:
 
 let
   plugins = pkgs.vimPlugins // pkgs.callPackage ./custom-plugins.nix {};
@@ -31,6 +31,10 @@ in
               plugins.supertab
               plugins.deoplete-nvim
               plugins.coc-nvim
+              plugins.vimwiki
+
+              # direnv
+              plugins.direnv-vim
 
               # python plugins
               plugins.deoplete-jedi
@@ -38,11 +42,14 @@ in
 
               # elm
               plugins.elm-vim
+
+              # custom plugins
+              plugins.vifm-vim-custom
             ];
             opt = [ ];
           };
         };
-        extraPython3Packages = (ps: with ps; [ jedi pynvim ]);
+        extraPython3Packages = (ps: with ps; [ pynvim ]);
       };
     };
   }
