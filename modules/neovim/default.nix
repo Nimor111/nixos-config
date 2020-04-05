@@ -43,6 +43,10 @@ in
               # elm
               plugins.elm-vim
 
+              # purescript
+              plugins.purescript-vim
+              plugins.psc-ide-vim
+
               # custom plugins
               plugins.vifm-vim-custom
             ];

@@ -7,7 +7,7 @@ import XMonad.Config.Desktop (desktopConfig)
 import XMonad.Util.SpawnOnce (spawnOnce)
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig (additionalKeysP)
-import XMonad.Util.Cursor (setDefaultCursor, xC_mouse)
+import XMonad.Util.Cursor (setDefaultCursor, xC_left_ptr)
 
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.ManageDocks (avoidStruts, manageDocks)
@@ -40,7 +40,7 @@ main = do
         } `additionalKeysP` myKeys
 
 myStartupHook = do
-    setDefaultCursor xC_mouse
+    setDefaultCursor xC_left_ptr
     spawnOnce "feh --bg-scale $HOME/wallpaper.png &"
 
 -- this is to make enough room for xmobar on the screen

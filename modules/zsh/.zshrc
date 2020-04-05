@@ -11,9 +11,6 @@ fi
 # Source autojump file
 source ~/.nix-profile/etc/profile.d/autojump.sh
 
-# Source virtualenvwrapper file
-source ~/.nix-profile/bin/virtualenvwrapper.sh
-
 # 256-color terminal
 export TERM=xterm-256color
 
