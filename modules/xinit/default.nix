@@ -4,8 +4,8 @@
   home-manager.users.gbojinov = {
     home.file = {
       ".xinitrc".text = ''
-        # Set wallpaper
-        # exec feh --bg-scale ./wallpaper.png &
+        # this is some android studio/idea garbage
+        export _JAVA_AWT_WM_NONREPARENTING=1
 
         # Start wm
         exec xmonad

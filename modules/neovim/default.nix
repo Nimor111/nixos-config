@@ -49,6 +49,10 @@ in
 
               # custom plugins
               plugins.vifm-vim-custom
+
+              # typescript
+              plugins.typescript-vim
+              plugins.vim-jsx-typescript-custom
             ];
             opt = [ ];
           };

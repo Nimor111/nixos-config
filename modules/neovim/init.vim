@@ -70,8 +70,16 @@ let g:jedi#rename_command = '<leader>r'
 " deoplete - enable at startup
 let g:deoplete#enable_at_startup = 1
 
-" enable deoplete in python files
+" disable deoplete in elm files
 autocmd FileType elm
+\ call deoplete#custom#buffer_option('auto_complete', v:false)
+
+" disable deoplete in typescript.tsx files
+autocmd FileType typescript.tsx
+\ call deoplete#custom#buffer_option('auto_complete', v:false)
+
+" disable deoplete in typescript files
+autocmd FileType typescript
 \ call deoplete#custom#buffer_option('auto_complete', v:false)
 
 " python linter
@@ -91,3 +99,12 @@ nmap <silent> gr <Plug>(coc-references)
 
 " map keys for vifm.vim
 map <leader>vv :Vifm<CR>
+
+" use :Prettier to format buffer
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" format with Prettier on save
+augroup typescripttsx
+    au!
+    autocmd FileType typescript.tsx,typescript autocmd BufWritePre <buffer> :Prettier
+augroup END

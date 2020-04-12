@@ -48,6 +48,10 @@
 
       # nodejs
       pkgs.nodejs
+
+      # android
+      pkgs.android-studio
+      pkgs.openjdk
     ];
   };
 }
