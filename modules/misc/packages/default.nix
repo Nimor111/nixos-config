@@ -7,6 +7,10 @@
       # internet
       pkgs.vivaldi
 
+      # security
+      pkgs.gnupg
+      pkgs.pass
+
       # terminal apps and tools
       pkgs.wget
       pkgs.vim

@@ -6,5 +6,6 @@
     ./xserver
     ./flatpak
     ./postgresql
+    ./gpg
   ];
 }

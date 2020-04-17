@@ -82,6 +82,10 @@ autocmd FileType typescript.tsx
 autocmd FileType typescript
 \ call deoplete#custom#buffer_option('auto_complete', v:false)
 
+" disable deoplete in rust files
+autocmd FileType rust
+\ call deoplete#custom#buffer_option('auto_complete', v:false)
+
 " python linter
 let g:neomake_python_enabled_makers = ['flake8']
 

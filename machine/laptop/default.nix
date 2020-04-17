@@ -9,10 +9,11 @@ in
       "${sources.home-manager}/nixos"
       ./hardware.nix
 
+      ../../modules/services
+
       ../../modules/nix-path
       ../../modules/user
       ../../modules/virtualisation
-      ../../modules/services
       ../../modules/fonts
       ../../modules/networking
       ../../modules/boot

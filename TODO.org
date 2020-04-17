@@ -7,7 +7,7 @@
 - [ ] Newsboat
 - [ ] Wallpaper chooser
 - [ ] Template ~shell.nix~ files for different languages
-- [ ] Password manager (~pass~)
+- [X] Password manager (~pass~)
 - [ ] Email client setup (~home-manager/accounts.email~)
 - [ ] Dropbox sync for org files
 - [ ] Format code with ~nixfmt~ and lint with ~nix-linter~
