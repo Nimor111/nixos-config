@@ -31,6 +31,17 @@
       pkgs.pfetch
       pkgs.direnv
       pkgs.vifm
+      pkgs.sxiv
+      pkgs.nix-prefetch-git
+
+      # for a world with virtual machines
+      pkgs.qemu
+
+      # sometimes it's needed
+      pkgs.libreoffice
+
+      # for conversions
+      pkgs.pandoc
 
       # the one and only
       pkgs.home-manager
