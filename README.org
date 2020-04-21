@@ -11,7 +11,13 @@
    #+BEGIN_SRC bash
    sudo ln -s overlays /etc/nixos/overlays
    #+END_SRC
-3. Rebuild the nixos configuration:
+3. Remove your channels ( I use a fixed version of ~nixpkgs~ managed by ~niv~ )
+   #+BEGIN_SRC bash
+   nix-channel --remove <channel_name>
+   # the root channel as well
+   sudo nix-channel --remove <channel_name>
+   #+END_SRC
+4. Rebuild the nixos configuration:
    #+BEGIN_SRC bash
    nix-shell --run 'rebuild'
    #+END_SRC
