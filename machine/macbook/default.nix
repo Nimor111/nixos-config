@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 
-
+let
+  user = "g.bozhinov";
+in
 {
   imports = [
     <home-manager/nix-darwin>
     ../../modules/macos
-    ../../modules/tmux
+    (import ../../modules/tmux { inherit user pkgs config; })
   ];
 
   users.users."g.bozhinov" = {
