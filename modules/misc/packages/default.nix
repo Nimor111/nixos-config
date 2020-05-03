@@ -3,7 +3,6 @@
 {
   home-manager.users.gbojinov = {
     home.packages = [
-
       # internet
       pkgs.vivaldi
 

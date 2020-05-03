@@ -30,6 +30,7 @@ in
       ../../modules/termite
       ../../modules/misc/packages
       ../../modules/zsh
+      ../../modules/qutebrowser
     ];
 
   # Define hostname
