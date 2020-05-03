@@ -112,3 +112,10 @@ augroup typescripttsx
     au!
     autocmd FileType typescript.tsx,typescript autocmd BufWritePre <buffer> :Prettier
 augroup END
+
+" disable coc for purescript
+augroup coc-haskell
+  " deletes command
+  autocmd!
+  au BufEnter *.purs :CocDisable
+augroup END
