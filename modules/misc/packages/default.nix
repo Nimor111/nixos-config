@@ -67,6 +67,9 @@
       # android
       pkgs.android-studio
       pkgs.openjdk
+
+      # random packages to try out
+      pkgs.abella
     ];
   };
 }
