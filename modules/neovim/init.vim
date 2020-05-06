@@ -119,3 +119,8 @@ augroup coc-haskell
   autocmd!
   au BufEnter *.purs :CocDisable
 augroup END
+
+" ignore node modules in ctrl-p
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
+			\ }
