@@ -9,6 +9,8 @@
       iosevka
       powerline-fonts
       hack-font
+      inconsolata-nerdfont
+      jetbrainsmono-nerdfont
     ];
   };
 }

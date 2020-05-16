@@ -53,6 +53,9 @@ in
               # typescript
               plugins.typescript-vim
               plugins.vim-jsx-typescript-custom
+
+              # devicons
+              plugins.vim-devicons
             ];
             opt = [ ];
           };
