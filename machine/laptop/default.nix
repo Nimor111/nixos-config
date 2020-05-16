@@ -42,4 +42,10 @@ in
 
   # Set your time zone.
   time.timeZone = "Europe/Sofia";
+
+  # Extra options
+  nix.extraOptions = ''
+    keep-outputs = true
+    keep-derivations = true
+  '';
 }
