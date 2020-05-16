@@ -31,6 +31,7 @@ in
       ../../modules/misc/packages
       ../../modules/zsh
       ../../modules/qutebrowser
+      ../../cachix.nix
     ];
 
   # Define hostname

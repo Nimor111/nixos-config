@@ -82,6 +82,10 @@ autocmd FileType typescript.tsx
 autocmd FileType typescript
 \ call deoplete#custom#buffer_option('auto_complete', v:false)
 
+" disable deoplete in javascript files
+autocmd FileType javascript
+\ call deoplete#custom#buffer_option('auto_complete', v:false)
+
 " disable deoplete in rust files
 autocmd FileType rust
 \ call deoplete#custom#buffer_option('auto_complete', v:false)

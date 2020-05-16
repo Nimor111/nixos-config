@@ -30,5 +30,5 @@ Config { font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <icon=haskell_20.xpm/> <fc=#666666>|</fc> %UnsafeStdinReader% }{ <fc=#FFB86C>%cpu%</fc> <fc=#FF5555>%memory%</fc> <fc=#82AAFF>%disku%</fc> <fc=#c3e88d>%dynnetwork%</fc> <icon=calendar-clock-icon_20.xpm/> <fc=#8BE9FD>%date%</fc> <fc=#dAA520>%battery%</fc> "
+       , template = " <icon=purescript_20.xpm/> <fc=#666666>|</fc> %UnsafeStdinReader% }{ <fc=#FFB86C>%cpu%</fc> <fc=#FF5555>%memory%</fc> <fc=#82AAFF>%disku%</fc> <fc=#c3e88d>%dynnetwork%</fc> <icon=calendar-clock-icon_20.xpm/> <fc=#8BE9FD>%date%</fc> <fc=#dAA520>%battery%</fc> "
        }

@@ -5,6 +5,8 @@
     home.packages = [
       # internet
       pkgs.vivaldi
+      pkgs.brave
+      pkgs.firefox
 
       # security
       pkgs.gnupg
@@ -32,6 +34,7 @@
       pkgs.vifm
       pkgs.sxiv
       pkgs.nix-prefetch-git
+      pkgs.cachix
 
       # for a world with virtual machines
       pkgs.qemu
@@ -69,6 +72,10 @@
 
       # random packages to try out
       pkgs.abella
+
+      # neuron
+      (let neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
+        in import neuronSrc)
     ];
   };
 }
