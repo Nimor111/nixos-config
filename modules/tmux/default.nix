@@ -4,7 +4,7 @@ let
   tmuxConfig = builtins.readFile ./tmux.conf;
 in
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     programs.tmux = {
       enable = true;
 

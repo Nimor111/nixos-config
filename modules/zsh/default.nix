@@ -5,7 +5,7 @@ let
   sources = import ../../sources.nix;
 in
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     home.file = {
       ".zprofile".text = ''
         if [ "$(tty)" = /dev/tty1 ]; then

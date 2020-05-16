@@ -1,6 +1,6 @@
 import System.IO (hPutStrLn)
 
-import XMonad (xmonad, terminal, borderWidth, mod4Mask, modMask, normalBorderColor, focusedBorderColor, logHook, layoutHook, manageHook, manageHook, (<+>), startupHook, spawn)
+import XMonad (xmonad, terminal, borderWidth, mod4Mask, modMask, normalBorderColor, focusedBorderColor, logHook, layoutHook, manageHook, manageHook, (<+>), startupHook, spawn, workspaces)
 
 import XMonad.Config.Desktop (desktopConfig)
 
@@ -37,6 +37,7 @@ main = do
             , focusedBorderColor = myFocusedBorderColor
             , layoutHook = myLayout
             , manageHook = myManageHook
+            , workspaces = myWorkspaces
         } `additionalKeysP` myKeys
 
 myStartupHook = do
@@ -51,3 +52,5 @@ myKeys =
     [ ("M-<Return>", spawn myTerminal)
     , ("M-d", spawn "dmenu_run -p 'dmenu:'")
     ]
+
+myWorkspaces = [ "dev", "www", "misc", "gh", "film", "vbox", "chat", "book", "game" ]

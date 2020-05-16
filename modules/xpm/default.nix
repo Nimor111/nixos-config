@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     home.file = {
       ".config/xmobar/xpm" = {
         source = ./xpm;

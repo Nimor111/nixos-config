@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     home.file = {
       ".xinitrc".text = ''
         # this is some android studio/idea garbage

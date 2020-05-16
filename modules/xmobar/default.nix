@@ -4,7 +4,7 @@ let
   xmobarConfig = builtins.readFile ./.xmobarrc;
 in
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     xdg.configFile."xmobar/.xmobarrc".text = xmobarConfig;
   };
 }

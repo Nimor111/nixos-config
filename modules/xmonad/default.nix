@@ -4,7 +4,7 @@ let
   xmonadConfig = builtins.readFile ./xmonad.hs;
 in
 {
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     xsession = {
       enable = true;
 

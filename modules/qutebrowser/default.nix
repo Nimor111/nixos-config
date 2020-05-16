@@ -4,13 +4,13 @@ let
   quickmarks = builtins.readFile ./quickmarks;
 in
   {
-    home-manager.users.gbojinov = {
+    primary-user.home-manager = {
       programs.qutebrowser = {
         enable = true;
         settings = {
           url.start_pages = "https://startpage.com";
           url.default_page = "https://startpage.com";
-          downloads.location.directory = "/home/gbojinov/Downloads";
+          downloads.location.directory = "/home/${config.primary-user.name}/Downloads";
         };
         extraConfig = ''
           c.url.searchengines = {

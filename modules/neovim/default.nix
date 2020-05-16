@@ -5,7 +5,7 @@ let
   vimConfig = builtins.readFile ./init.vim;
 in
   {
-    home-manager.users.gbojinov = {
+    primary-user.home-manager = {
       programs.neovim = {
         enable = true;
         viAlias = true;

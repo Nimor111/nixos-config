@@ -1,4 +1,4 @@
-{...}:
+{lib, ...}:
 
 let
   sources = import ../../sources.nix;
@@ -7,6 +7,7 @@ in
   imports =
     [
       "${sources.home-manager}/nixos"
+      ../../modules/custom
       ./hardware.nix
 
       ../../modules/services
@@ -48,4 +49,9 @@ in
     keep-outputs = true
     keep-derivations = true
   '';
+
+  primary-user.name = "gbojinov";
+  primary-user.email = "georgi.bojinov@hotmail.com";
+  primary-user.userName = "Nimor111";
+  primary-user.hashedPassword = lib.fileContents ../../gbojinov.hashedPassword;
 }

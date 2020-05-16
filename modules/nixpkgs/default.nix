@@ -13,7 +13,7 @@ in
     overlays = map load-overlay all-overlays;
   };
 
-  home-manager.users.gbojinov = {
+  primary-user.home-manager = {
     nixpkgs.config = config.nixpkgs.config;
 
     # puts it in .config/nixpkgs/config.nix
