@@ -22,6 +22,7 @@ in
       ../../modules/backlight
       ../../modules/tmux
       ../../modules/xinit
+      ../../modules/fzf
       ../../modules/git
       ../../modules/zathura
       ../../modules/neovim
