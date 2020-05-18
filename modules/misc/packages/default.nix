@@ -36,6 +36,9 @@
       pkgs.nix-prefetch-git
       pkgs.cachix
 
+      # notifications
+      pkgs.libnotify
+
       # for a world with virtual machines
       pkgs.qemu
 
