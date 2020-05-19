@@ -12,6 +12,7 @@ in
     ../../modules/tmux
     ../../modules/git
     ../../modules/alacritty
+    ../../modules/fzf
     ../../cachix.nix
   ];
 
@@ -38,9 +39,7 @@ in
     pkgs.emacs
     pkgs.exa
     pkgs.pfetch
-    #pkgs.git
     pkgs.ripgrep
-    pkgs.fzf
     pkgs.tree
     pkgs.unzip
     pkgs.curl
@@ -51,6 +50,7 @@ in
     pkgs.nodejs
     pkgs.direnv
     pkgs.lorri
+    pkgs.fd
 
     # neuron
     (let neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
@@ -69,8 +69,6 @@ in
   programs.bash.enable = true;
   programs.zsh = {
     enable = true;
-    enableFzfHistory = true;
-    enableFzfGit = true;
     enableSyntaxHighlighting = true;
   };
   environment.shells = with pkgs; [ bash zsh ];
