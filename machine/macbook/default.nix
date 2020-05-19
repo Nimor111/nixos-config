@@ -1,19 +1,21 @@
 { config, pkgs, ... }:
 
 let
-  user = "g.bozhinov";
+  secrets = import ./secret.nix {};
+  sources = import ../../sources.nix;
 in
 {
   imports = [
-    <home-manager/nix-darwin>
+    "${sources.home-manager}/nix-darwin"
+    ../../modules/custom
     ../../modules/macos
-    (import ../../modules/tmux { inherit user pkgs config; })
+    ../../modules/tmux
+    ../../modules/git
   ];
 
-  users.users."g.bozhinov" = {
-    name = "g.bozhinov";
-    shell = pkgs.zsh;
-  };
+  primary-user.name = "g.bozhinov";
+  primary-user.email = secrets.email;
+  primary-user.userName = secrets.userName;
 
   environment.systemPackages = [
 
@@ -27,22 +29,21 @@ in
     # uncomment when neovim is fixed on darwin ( who knows when that will happen )
     # pkgs.neovim
 
-    pkgs.kitty
     pkgs.vim
     pkgs.jump
     pkgs.bat
     pkgs.emacs
     pkgs.exa
     pkgs.pfetch
-    pkgs.git
+    #pkgs.git
     pkgs.ripgrep
     pkgs.fzf
     pkgs.tree
     pkgs.unzip
     pkgs.curl
     pkgs.htop
-    pkgs.scala
-    pkgs.sbt
+    #pkgs.scala
+    #pkgs.sbt
     pkgs.nix-prefetch-git
     pkgs.nodejs
     pkgs.direnv

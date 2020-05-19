@@ -10,11 +10,13 @@
     pkgs.jetbrains-mono
   ];
 
-  system.defaults.finder.AppleShowAllExtensions = true;
-
-  system.defaults.dock.autohide = true;
-  system.defaults.dock.orientation = "right";
-  system.defaults.dock.show-recents = false;
-  system.defaults.dock.tilesize = 48;  # Default value is 64.
+  system.defaults = {
+    finder.AppleShowAllExtensions = true;
+    dock = {
+      autohide = true;
+      orientation = "right";
+      show-recents = false;
+      tilesize = 48;  # Default value is 64.
+    };
+  };
 }
-
