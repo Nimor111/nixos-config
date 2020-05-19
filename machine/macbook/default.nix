@@ -11,6 +11,8 @@ in
     ../../modules/macos
     ../../modules/tmux
     ../../modules/git
+    ../../modules/alacritty
+    ../../cachix.nix
   ];
 
   primary-user.name = "g.bozhinov";
@@ -19,6 +21,7 @@ in
 
   environment.systemPackages = [
 
+    pkgs.cachix
     # GNU userland
     pkgs.coreutils
     pkgs.gnumake
@@ -48,6 +51,10 @@ in
     pkgs.nodejs
     pkgs.direnv
     pkgs.lorri
+
+    # neuron
+    (let neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
+      in import neuronSrc)
   ];
 
   # Use a custom configuration.nix location.
