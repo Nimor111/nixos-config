@@ -12,6 +12,13 @@
 - [ ] Dropbox sync for org files
 - [ ] Format code with ~nixfmt~ and lint with ~nix-linter~
 
+** Darwin todos
+- [ ] Finish setting up home manager programs - zsh, packages
+- [ ] Use scala, sbt and java from nix (keychain should be somehow setup I guess)
+- [ ] MacOS settings (try to setup keybindings from config nix)
+- [X] Use ~nixpkgs~ from ~niv~ on MacOS as well (setup up a ~shell.nix~ script to rebuild darwin and setup nix path)
+- [ ] All packages from Brew in a Brewfile and somehow managed by nix
+
 ** Different things to try
 - Wayland (sway, waybar, swaylock)
 - Different ~nixos~ and ~home-manager~ options

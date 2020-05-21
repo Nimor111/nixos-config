@@ -11,6 +11,18 @@
         "url": "https://github.com/rycee/home-manager/archive/a378bccd609c159fa8d421233b9c5eae04f02042.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix-darwin": {
+        "branch": "master",
+        "description": "nix modules for darwin",
+        "homepage": "",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "5f6d300a2d9d7e18b2cf15ecd9cf1432249a648a",
+        "sha256": "0xkd7x0w6w4b4cxp6lf371gagpd7s4sk7ldg4f3ncvlb38ksx99f",
+        "type": "tarball",
+        "url": "https://github.com/LnL7/nix-darwin/archive/5f6d300a2d9d7e18b2cf15ecd9cf1432249a648a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "nixos-20.03",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
