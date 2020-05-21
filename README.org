@@ -1,4 +1,4 @@
-#+TITLE:   Nixos configuration
+#+TITLE:   NixOS/nix-darwin configuration
 #+DATE:    March 15, 2020
 
 ** Steps to use
@@ -7,9 +7,17 @@
    #+BEGIN_SRC bash
    sudo ln -s machine/<machine>/default.nix /etc/nixos/configuration.nix
    #+END_SRC
+   If you're on darwin:
+   #+BEGIN_SRC bash
+   sudo ln -s machine/<machine>/default.nix $HOME/.nixpkgs/darwin-configuration.nix
+   #+END_SRC
 2. Symlink the overlays:
    #+BEGIN_SRC bash
    sudo ln -s overlays /etc/nixos/overlays
+   #+END_SRC
+   If you're on darwin:
+   #+BEGIN_SRC bash
+   sudo ln -s overlays $HOME/.nixpkgs/overlays
    #+END_SRC
 3. Remove your channels ( I use a fixed version of ~nixpkgs~ managed by ~niv~ )
    #+BEGIN_SRC bash
