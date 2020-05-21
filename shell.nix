@@ -3,6 +3,8 @@
 let
   pkgs = import sources.nixpkgs {};
 
+  isDarwin = pkgs.stdenvNoCC.isDarwin;
+
   niv = pkgs.symlinkJoin {
     name = "niv";
     paths = [ sources.niv ];
@@ -13,16 +15,27 @@ let
     '';
   };
 
-  configuration = /etc/nixos/configuration.nix;
-  overlays = /etc/nixos/overlays;
+  configuration = if isDarwin then ~/.nixpkgs/darwin-configuration.nix else /etc/nixos/configuration.nix;
+  overlays = if isDarwin then ~/.nixpkgs/overlays else /etc/nixos/overlays;
 
-  rebuild = pkgs.writeShellScriptBin "rebuild" ''
+  darwinRebuild = pkgs.writeShellScriptBin "rebuild" ''
+    set -e
+    darwin-rebuild switch --show-trace \
+      -I darwin=${sources.nix-darwin} \
+      -I nixpkgs=${sources.nixpkgs} \
+      -I darwin-config=${configuration} \
+      -I nixpkgs-overlays=${overlays}
+  '';
+
+  nixosRebuild = pkgs.writeShellScriptBin "rebuild" ''
     set -e
     sudo nixos-rebuild switch --show-trace \
       -I nixpkgs=${sources.nixpkgs} \
       -I nixos-config=${configuration} \
       -I nixpkgs-overlays=${overlays}
   '';
+
+  rebuild = if isDarwin then darwinRebuild else nixosRebuild;
 in
 
 pkgs.mkShell {

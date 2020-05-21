@@ -13,6 +13,7 @@ in
     ../../modules/git
     ../../modules/alacritty
     ../../modules/fzf
+    ../../modules/nix-path/darwin
     ../../cachix.nix
   ];
 
