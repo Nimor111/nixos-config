@@ -1,6 +1,6 @@
 import System.IO (hPutStrLn)
 
-import XMonad (xmonad, terminal, borderWidth, mod4Mask, modMask, normalBorderColor, focusedBorderColor, logHook, layoutHook, manageHook, manageHook, (<+>), startupHook, spawn, workspaces)
+import XMonad
 
 import XMonad.Config.Desktop (desktopConfig)
 
@@ -46,7 +46,11 @@ myStartupHook = do
 
 -- this is to make enough room for xmobar on the screen
 myLayout = avoidStruts $ layoutHook desktopConfig
-myManageHook = manageHook desktopConfig <+> manageDocks
+myManageHook = composeAll
+    [ className =? "Brave-browser" --> doShift ( myWorkspaces !! 1 )
+    , className =? "Firefox"       --> doShift ( myWorkspaces !! 1 )
+    , className =? "vlc"           --> doShift ( myWorkspaces !! 4 )
+    ] <+> manageHook desktopConfig <+> manageDocks
 
 myKeys =
     [ ("M-<Return>", spawn myTerminal)

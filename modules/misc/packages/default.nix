@@ -8,6 +8,9 @@
       pkgs.brave
       pkgs.firefox
 
+      # media
+      pkgs.vlc
+
       # security
       pkgs.gnupg
       pkgs.pass
