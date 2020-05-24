@@ -47,7 +47,7 @@ let
 
   format = pkgs.writeShellScriptBin "format" "nixpkgs-fmt ${files}";
 
-  lint = pkgs.writeShellScriptBin "lint" "nix-linter ${files}";
+  lint = pkgs.writeShellScriptBin "lint" "nix-linter ${files} && echo No lint errors!";
 in
 
 pkgs.mkShell {
