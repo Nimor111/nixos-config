@@ -1,3 +1,3 @@
 _: super: {
-  comma = import ./comma.nix { inherit (super) stdenv fetchFromGitHub; } {};
+  comma = import ./comma.nix { inherit (super) fetchFromGitHub; } {};
 }

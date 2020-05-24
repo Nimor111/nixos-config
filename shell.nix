@@ -20,6 +20,9 @@ let
 
   darwinRebuild = pkgs.writeShellScriptBin "rebuild" ''
     set -e
+    ${lint}/bin/lint
+    ${format}/bin/format
+
     darwin-rebuild switch --show-trace \
       -I darwin=${sources.nix-darwin} \
       -I nixpkgs=${sources.nixpkgs} \
@@ -29,6 +32,9 @@ let
 
   nixosRebuild = pkgs.writeShellScriptBin "rebuild" ''
     set -e
+    ${lint}/bin/lint
+    ${format}/bin/format
+
     sudo nixos-rebuild switch --show-trace \
       -I nixpkgs=${sources.nixpkgs} \
       -I nixos-config=${configuration} \
