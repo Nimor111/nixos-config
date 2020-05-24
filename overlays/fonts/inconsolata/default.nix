@@ -2,7 +2,8 @@
 
 let
   version = "2.0.0";
-in fetchzip {
+in
+fetchzip {
   name = "inconsolata-nerdfont-${version}";
 
   url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/Inconsolata.zip";

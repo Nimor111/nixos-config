@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 
 {
   email = "example@email.com";

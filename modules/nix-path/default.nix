@@ -1,4 +1,4 @@
-{lib, ...}:
+{ lib, ... }:
 
 {
   nix.nixPath = lib.mapAttrsToList (k: v: "${k}=${v}") {

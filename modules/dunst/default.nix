@@ -1,5 +1,5 @@
 # Some more configs taken from cprussin: https://github.com/cprussin/dotfiles
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
   primary-user.home-manager = {

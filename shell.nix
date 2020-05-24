@@ -36,11 +36,17 @@ let
   '';
 
   rebuild = if isDarwin then darwinRebuild else nixosRebuild;
+
+  files = "$(find . -name '*.nix')";
+
+  format = pkgs.writeShellScriptBin "format" "nixpkgs-fmt ${files}";
 in
 
 pkgs.mkShell {
   buildInputs = [
+    pkgs.nixpkgs-fmt
     niv
     rebuild
+    format
   ];
 }

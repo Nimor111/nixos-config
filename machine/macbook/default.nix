@@ -55,8 +55,12 @@ in
     pkgs.fd
 
     # neuron
-    (let neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
-      in import neuronSrc)
+    (
+      let
+        neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
+      in
+        import neuronSrc
+    )
   ];
 
   # Use a custom configuration.nix location.

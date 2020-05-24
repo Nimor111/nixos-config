@@ -1,4 +1,4 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 let
   zshConfig = builtins.readFile ./.zshrc;

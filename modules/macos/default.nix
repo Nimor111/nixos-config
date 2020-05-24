@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
   ################
@@ -16,7 +16,7 @@
       autohide = true;
       orientation = "right";
       show-recents = false;
-      tilesize = 48;  # Default value is 64.
+      tilesize = 48; # Default value is 64.
     };
   };
 }

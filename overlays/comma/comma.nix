@@ -1,4 +1,4 @@
-{stdenv, fetchFromGitHub}:
+{ stdenv, fetchFromGitHub }:
 
 let
   name = "comma";
@@ -10,4 +10,5 @@ let
     rev = version;
     sha256 = "0n5a3rnv9qnnsrl76kpi6dmaxmwj1mpdd2g0b4n1wfimqfaz6gi1";
   };
-in import "${src.out}/default.nix"
+in
+import "${src.out}/default.nix"

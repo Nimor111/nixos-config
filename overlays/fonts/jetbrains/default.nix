@@ -2,7 +2,8 @@
 
 let
   version = "2.1.0";
-in fetchzip {
+in
+fetchzip {
   name = "jetbrainsmono-nerdfont-${version}";
 
   url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/JetBrainsMono.zip";

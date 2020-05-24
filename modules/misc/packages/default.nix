@@ -1,4 +1,4 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
   primary-user.home-manager = {
@@ -77,9 +77,13 @@
       pkgs.abella
 
       # neuron
-      (let neuronRev = "d52ce56e68be5716b18d0183204a72a228e6786b";
-           neuronSrc = builtins.fetchTarball "https://github.com/srid/neuron/archive/${neuronRev}.tar.gz";
-        in import neuronSrc)
+      (
+        let
+          neuronRev = "d52ce56e68be5716b18d0183204a72a228e6786b";
+          neuronSrc = builtins.fetchTarball "https://github.com/srid/neuron/archive/${neuronRev}.tar.gz";
+        in
+          import neuronSrc
+      )
     ];
   };
 }
