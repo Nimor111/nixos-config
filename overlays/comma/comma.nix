@@ -1,7 +1,6 @@
-{ stdenv, fetchFromGitHub }:
+{ fetchFromGitHub }:
 
 let
-  name = "comma";
   version = "master";
 
   src = fetchFromGitHub {

@@ -10,7 +10,7 @@
 - [X] Password manager (~pass~)
 - [ ] Email client setup (~home-manager/accounts.email~)
 - [ ] Dropbox sync for org files
-- [ ] Format code with ~nixfmt~ and lint with ~nix-linter~
+- [X] Format code with ~nixfmt~ and lint with ~nix-linter~
 
 ** Darwin todos
 - [ ] Finish setting up home manager programs - zsh, packages

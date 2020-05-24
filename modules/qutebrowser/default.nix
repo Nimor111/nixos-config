@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, ... }:
 
 let
   quickmarks = builtins.readFile ./quickmarks;

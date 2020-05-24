@@ -40,13 +40,17 @@ let
   files = "$(find . -name '*.nix')";
 
   format = pkgs.writeShellScriptBin "format" "nixpkgs-fmt ${files}";
+
+  lint = pkgs.writeShellScriptBin "lint" "nix-linter ${files}";
 in
 
 pkgs.mkShell {
   buildInputs = [
     pkgs.nixpkgs-fmt
+    pkgs.nix-linter
     niv
     rebuild
     format
+    lint
   ];
 }
