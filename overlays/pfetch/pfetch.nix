@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   name = "pfetch";
-  version = "0.6.0";
+  version = "e74081fa469287bee7e2fd35f7d1cb7b1ea19d2f";
 
   src = fetchFromGitHub {
     owner = "dylanaraps";
     repo = "pfetch";
     rev = version;
-    sha256 = "06z0k1naw3k052p2z7241lx92rp5m07zlr0alx8pdm6mkc3c4v8f";
+    sha256 = "0fnlihq45hcljwshadklb6f9m95042r34x2i2imq8b946a6v1glp";
   };
 
   dontBuild = true;

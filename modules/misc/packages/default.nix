@@ -38,6 +38,8 @@
       pkgs.sxiv
       pkgs.nix-prefetch-git
       pkgs.cachix
+      pkgs.comma
+      pkgs.nix-index
 
       # notifications
       pkgs.libnotify
@@ -60,17 +62,12 @@
       # text editors
       pkgs.emacs
 
-      # python packages
-      # pkgs.python3Full
-      # pkgs.python37Packages.virtualenv
-      # pkgs.python37Packages.virtualenvwrapper
+      # nodejs for coc.nvim
+      pkgs.nodejs
 
       # gcc
       pkgs.gcc
       pkgs.gnumake
-
-      # nodejs
-      pkgs.nodejs
 
       # android
       pkgs.android-studio
@@ -80,7 +77,8 @@
       pkgs.abella
 
       # neuron
-      (let neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
+      (let neuronRev = "d52ce56e68be5716b18d0183204a72a228e6786b";
+           neuronSrc = builtins.fetchTarball "https://github.com/srid/neuron/archive/${neuronRev}.tar.gz";
         in import neuronSrc)
     ];
   };
