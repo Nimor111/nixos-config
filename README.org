@@ -35,3 +35,6 @@
 - [[./modules][modules]] - reusable chunks to build a machine configuration. Includes
   modules from [[https://github.com/rycee/home-manager][home-manager]] and ~nixos~
 - ~source.*~ - [[https://github.com/nmattia/niv][niv]] files
+
+** Credits - configs I have taken ideas and code from
+- [[https://github.com/cprussin/dotfiles][cprussin/dotfiles]]
