@@ -19,9 +19,10 @@ let
   overlays = "$dotfiles/overlays";
 
   darwinRebuild = pkgs.writeShellScriptBin "rebuild" ''
+    set -e
+
     export dotfiles="$(nix-build --no-out-link)"
 
-    set -e
     ${lint}/bin/lint
     ${format}/bin/format
 
@@ -33,9 +34,10 @@ let
   '';
 
   nixosRebuild = pkgs.writeShellScriptBin "rebuild" ''
+    set -e
+
     export dotfiles="$(nix-build --no-out-link)"
 
-    set -e
     ${lint}/bin/lint
     ${format}/bin/format
 
