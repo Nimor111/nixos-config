@@ -1,3 +1,3 @@
-_: super: {
-  comma = import ./comma.nix { inherit (super) fetchFromGitHub; } {};
+self: _: {
+  comma = import ../../pkgs/comma { inherit (self) fetchFromGitHub; } {};
 }

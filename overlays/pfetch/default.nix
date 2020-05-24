@@ -1,3 +1,3 @@
 self: _: {
-  pfetch = self.callPackage ./pfetch.nix {};
+  pfetch = self.callPackage ../../pkgs/pfetch {};
 }

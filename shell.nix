@@ -16,9 +16,11 @@ let
   };
 
   configuration = if isDarwin then ~/.nixpkgs/darwin-configuration.nix else /etc/nixos/configuration.nix;
-  overlays = if isDarwin then ~/.nixpkgs/overlays else /etc/nixos/overlays;
+  overlays = "$dotfiles/overlays";
 
   darwinRebuild = pkgs.writeShellScriptBin "rebuild" ''
+    export dotfiles="$(nix-build --no-out-link)"
+
     set -e
     ${lint}/bin/lint
     ${format}/bin/format
@@ -31,6 +33,8 @@ let
   '';
 
   nixosRebuild = pkgs.writeShellScriptBin "rebuild" ''
+    export dotfiles="$(nix-build --no-out-link)"
+
     set -e
     ${lint}/bin/lint
     ${format}/bin/format
