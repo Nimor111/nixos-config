@@ -16,6 +16,7 @@
       pkgs.pass
 
       # terminal apps and tools
+      pkgs.termonad-with-packages
       pkgs.wget
       pkgs.vim
       pkgs.neofetch

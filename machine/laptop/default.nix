@@ -31,6 +31,7 @@ in
       ../../modules/xpm
       ../../modules/xmonad
       ../../modules/termite
+      ../../modules/termonad
       ../../modules/misc/packages
       ../../modules/zsh
       ../../modules/qutebrowser
