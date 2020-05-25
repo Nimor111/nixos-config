@@ -13,7 +13,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, xmobarColor, shorten
 import XMonad.Hooks.ManageDocks (avoidStruts, manageDocks)
 
 
-myTerminal = "termite"
+myTerminal = "termonad"
 myModMask = mod4Mask
 myBorderWidth = 2
 myNormalBorderColor = "#292d3e"

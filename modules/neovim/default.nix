@@ -56,6 +56,9 @@ in
 
             # devicons
             plugins.vim-devicons
+
+            # graphql
+            plugins.vim-graphql-custom
           ];
           opt = [];
         };

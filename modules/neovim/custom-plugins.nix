@@ -31,4 +31,14 @@
       sha256 = "1k7i0gi7xwd9ld93mf1ryky85y1l843b6f1a2g2bzkkkayq4mcsf";
     };
   };
+
+  vim-graphql-custom = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-graphql";
+    src = pkgs.fetchFromGitHub {
+      owner = "jparise";
+      repo = "vim-graphql";
+      rev = "a3ff39f955e60baeddd8c3c4d1cab291ce37d66e";
+      sha256 = "0d98b0zpbyjcafp0q25c3qsx13q74nszxsi5jxxjnpz1wv6s83x1";
+    };
+  };
 }
