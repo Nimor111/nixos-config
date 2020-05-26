@@ -30,7 +30,6 @@ let
       -I darwin=${sources.nix-darwin} \
       -I nixpkgs=${sources.nixpkgs} \
       -I darwin-config=${configuration} \
-      -I nixpkgs-overlays=${overlays}
   '';
 
   nixosRebuild = pkgs.writeShellScriptBin "rebuild" ''

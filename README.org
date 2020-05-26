@@ -40,3 +40,4 @@
 
 ** Credits - configs I have taken ideas and code from
 - [[https://github.com/cprussin/dotfiles][cprussin/dotfiles]]
+- [[https://github.com/peel/dotfiles][peel/dotfiles]] - for darwin configs

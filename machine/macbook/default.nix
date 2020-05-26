@@ -41,6 +41,7 @@ in
     pkgs.emacs
     pkgs.exa
     pkgs.pfetch
+    pkgs.comma
     pkgs.ripgrep
     pkgs.tree
     pkgs.unzip
@@ -66,6 +67,19 @@ in
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+
+  nixpkgs.overlays =
+    let
+      path = ../../overlays;
+    in
+      with builtins;
+      map (n: import (path + ("/" + n)))
+        (
+          filter (
+            n: match ".*\\.nix" n != null || pathExists (path + ("/" + n + "/default.nix"))
+          )
+            (attrNames (readDir path))
+        );
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
