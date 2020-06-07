@@ -39,6 +39,7 @@
       pkgs.cachix
       pkgs.comma
       pkgs.nix-index
+      pkgs.choose
 
       # notifications
       pkgs.libnotify
