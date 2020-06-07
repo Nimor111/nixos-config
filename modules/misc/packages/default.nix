@@ -4,8 +4,6 @@
   primary-user.home-manager = {
     home.packages = [
       # internet
-      pkgs.vivaldi
-      pkgs.brave
       pkgs.firefox
 
       # media
