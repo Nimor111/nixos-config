@@ -40,6 +40,7 @@ in
     pkgs.bat
     pkgs.emacs
     pkgs.exa
+    pkgs.choose
     pkgs.pfetch
     pkgs.comma
     pkgs.ripgrep
