@@ -76,6 +76,10 @@
       # random packages to try out
       pkgs.abella
 
+      # notes
+      pkgs.joplin
+      pkgs.joplin-desktop
+
       # neuron
       (
         let
