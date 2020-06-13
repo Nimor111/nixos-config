@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage rec {
       but the overhead of getting them to behave should not be necessary.
     '';
     homepage = "https://github.com/theryangeary/choose";
-    license = with licenses; [ gpl_3 ];
+    license = with licenses; [ gpl3 ];
     maintainers = with maintainers; [ theryangeary ];
     platforms = platforms.all;
   };
