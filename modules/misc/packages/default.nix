@@ -83,7 +83,7 @@
       # neuron
       (
         let
-          neuronRev = "ac46252e0d68a1d7176c223515b04a56f9e5cfa9";
+          neuronRev = "4719f1e396b6585605d8bca99b3fe279107da9bc";
           neuronSrc = builtins.fetchTarball "https://github.com/srid/neuron/archive/${neuronRev}.tar.gz";
         in
           import neuronSrc
