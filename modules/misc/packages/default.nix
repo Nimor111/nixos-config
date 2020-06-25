@@ -80,6 +80,9 @@
       pkgs.joplin
       pkgs.joplin-desktop
 
+      # db
+      pkgs.sqlite
+
       # neuron
       (
         let
