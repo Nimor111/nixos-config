@@ -48,6 +48,7 @@ in
     pkgs.unzip
     pkgs.curl
     pkgs.htop
+    pkgs.ytop
     #pkgs.scala
     #pkgs.sbt
     pkgs.nix-prefetch-git
