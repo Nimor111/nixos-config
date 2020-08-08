@@ -33,7 +33,7 @@ in
     pkgs.vifm
 
     # uncomment when neovim is fixed on darwin ( who knows when that will happen )
-    # pkgs.neovim
+    pkgs.neovim
 
     pkgs.vim
     pkgs.jump
