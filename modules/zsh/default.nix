@@ -1,5 +1,4 @@
 { ... }:
-
 let
   zshConfig = builtins.readFile ./.zshrc;
   sources = import ../../sources.nix;

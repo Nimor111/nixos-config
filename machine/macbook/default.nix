@@ -1,8 +1,6 @@
 { pkgs, ... }:
-
-
 let
-  secrets = import ./secret.nix {};
+  secrets = import ./secret.nix { };
   sources = import ../../sources.nix;
 in
 {
@@ -14,7 +12,8 @@ in
     ../../modules/git
     ../../modules/alacritty
     ../../modules/fzf
-    ../../modules/nix-path/darwin
+    ../../modules/nixpkgs/darwin
+    # ../../modules/nix-path/darwin
     ../../cachix.nix
   ];
 
@@ -62,7 +61,7 @@ in
       let
         neuronSrc = builtins.fetchTarball https://github.com/srid/neuron/archive/master.tar.gz;
       in
-        import neuronSrc {}
+      import neuronSrc { }
     )
   ];
 
@@ -74,14 +73,15 @@ in
     let
       path = ../../overlays;
     in
-      with builtins;
-      map (n: import (path + ("/" + n)))
-        (
-          filter (
+    with builtins;
+    map (n: import (path + ("/" + n)))
+      (
+        filter
+          (
             n: match ".*\\.nix" n != null || pathExists (path + ("/" + n + "/default.nix"))
           )
-            (attrNames (readDir path))
-        );
+          (attrNames (readDir path))
+      );
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;

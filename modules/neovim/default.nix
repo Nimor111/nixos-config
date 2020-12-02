@@ -1,7 +1,6 @@
 { pkgs, ... }:
-
 let
-  plugins = pkgs.vimPlugins // pkgs.callPackage ./custom-plugins.nix {};
+  plugins = pkgs.vimPlugins // pkgs.callPackage ./custom-plugins.nix { };
   vimConfig = builtins.readFile ./init.vim;
 in
 {
@@ -60,7 +59,7 @@ in
             # graphql
             plugins.vim-graphql-custom
           ];
-          opt = [];
+          opt = [ ];
         };
       };
       extraPython3Packages = (ps: with ps; [ pynvim ]);

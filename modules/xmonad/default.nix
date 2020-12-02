@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 let
   xmonadConfig = builtins.readFile ./xmonad.hs;
 in

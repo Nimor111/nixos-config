@@ -1,3 +1,3 @@
 self: _: {
-  pfetch = self.callPackage ../../pkgs/pfetch {};
+  pfetch = self.callPackage ../../pkgs/pfetch { };
 }

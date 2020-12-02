@@ -1,5 +1,4 @@
 { ... }:
-
 let
   xmobarConfig = builtins.readFile ./.xmobarrc;
 in

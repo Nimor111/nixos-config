@@ -1,9 +1,7 @@
 { pkgs, ... }:
-
 let
   i3modifier = "Mod4";
 in
-
 {
   primary-user.home-manager = {
     xsession = {

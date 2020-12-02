@@ -1,3 +1,3 @@
 self: _: {
-  choose = self.callPackage ../../pkgs/choose {};
+  choose = self.callPackage ../../pkgs/choose { };
 }

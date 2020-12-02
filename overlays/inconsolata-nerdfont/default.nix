@@ -1,3 +1,3 @@
 self: _: {
-  inconsolata-nerdfont = self.callPackage ../../pkgs/inconsolata-nerdfont {};
+  inconsolata-nerdfont = self.callPackage ../../pkgs/inconsolata-nerdfont { };
 }

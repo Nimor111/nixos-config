@@ -1,3 +1,3 @@
 self: _: {
-  jetbrainsmono-nerdfont = self.callPackage ../../pkgs/jetbrains-nerdfont {};
+  jetbrainsmono-nerdfont = self.callPackage ../../pkgs/jetbrains-nerdfont { };
 }

@@ -1,6 +1,5 @@
 # WARN: this file will get overwritten by $ cachix use <name>
 { lib, ... }:
-
 let
   folder = ./cachix;
   toImport = name: _: folder + ("/" + name);

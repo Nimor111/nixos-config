@@ -1,5 +1,4 @@
 { ... }:
-
 let
   tmuxConfig = builtins.readFile ./tmux.conf;
 in

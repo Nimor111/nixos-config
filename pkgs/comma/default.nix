@@ -1,5 +1,4 @@
 { fetchFromGitHub }:
-
 let
   version = "master";
 

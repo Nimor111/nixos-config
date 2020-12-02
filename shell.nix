@@ -1,7 +1,6 @@
 { sources ? import ./sources.nix }:
-
 let
-  pkgs = import sources.nixpkgs {};
+  pkgs = import sources.nixpkgs { };
 
   isDarwin = pkgs.stdenvNoCC.isDarwin;
 
@@ -55,7 +54,6 @@ let
 
   lint = pkgs.writeShellScriptBin "lint" "nix-linter ${files} && echo No lint errors!";
 in
-
 pkgs.mkShell {
   buildInputs = [
     pkgs.nixpkgs-fmt

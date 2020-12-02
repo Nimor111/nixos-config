@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage rec {
 
   buildInputs = stdenv.lib.optionals stdenv.isDarwin [ IOKit ];
 
-  cargoSha256 = "14bghpfa856gsz815hnlarzd0a48g89k1l9vp5niigbi741mmfrd";
+  cargoSha256 = "0f5h9qkgvq3yxcw2jzb5szill4avr2ypk84lhc30iw21r3qm01qn";
 
   meta = with stdenv.lib; {
     description = "A TUI system monitor written in Rust";

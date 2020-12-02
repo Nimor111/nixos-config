@@ -1,5 +1,4 @@
 { ... }:
-
 let
   termonadConfig = builtins.readFile ./termonad.hs;
 in
